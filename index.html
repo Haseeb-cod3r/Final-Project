@@ -18,7 +18,8 @@
       <nav>
         <img src="images/logo.png" class="logo" />
         <h1>Fiction <span class="name">Digitals</span></h1>
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul id="nav-menu">
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="Market.html">Market</a></li>
           <li><a href="Wallet.html">Wallet</a></li>
@@ -26,6 +27,20 @@
         </ul>
       </nav>
     </header>
+
+    <section class="carousel">
+      <div class="carousel-container" id="carousel-container">
+        <img
+          src="images/slid1.jpeg"
+          alt="Slide 1"
+          class="carousel-slide active"
+        />
+        <img src="images/slid5.jpeg" alt="Slide 2" class="carousel-slide" />
+        <img src="images/slid4.jpeg" alt="Slide 3" class="carousel-slide" />
+      </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </section>
+
     <main>
       <div class="content">
         <h1>BUY & <br />SELL <span>CRYPTO</span></h1>
@@ -36,10 +51,70 @@
         <a href="Market.html" class="btn1">Display Prices </a>
       </div>
       <div class="img">
-        <img src="images/crypto.png" alt="">
+        <img src="images/crypto.png" alt="" />
       </div>
     </main>
 
-    <script src="script.js"></script>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Logo" />
+          <h2>Fiction <span class="name">Digitals</span></h2>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="Market.html">Market</a>
+          <a href="Wallet.html">Wallet</a>
+          <a href="About.html">About Us</a>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Fiction Digitals. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+      });
+
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dotsContainer = document.getElementById("carousel-dots");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove("active");
+          dotsContainer.children[i].classList.remove("active");
+        });
+        slides[index].classList.add("active");
+        dotsContainer.children[index].classList.add("active");
+      }
+
+      function createDots() {
+        slides.forEach((_, index) => {
+          const dot = document.createElement("span");
+          dot.addEventListener("click", () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+          });
+          dotsContainer.appendChild(dot);
+        });
+      }
+
+      function startCarousel() {
+        showSlide(currentSlide);
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }, 4000); // 4 seconds per slide
+      }
+
+      createDots();
+      startCarousel();
+    </script>
   </body>
 </html>

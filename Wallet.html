@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wallet</title>
-    <link rel="stylesheet" href="wallet.css">
-</head>
-<body>
+    <link rel="stylesheet" href="wallet.css" />
+  </head>
+  <body>
     <div class="otherContainer">
-       <nav>
+      <nav>
         <img src="images/logo.png" class="logo" />
-        <h1>Fiction <span class="name">Digital</span></h1>
-        <ul>
-          <li><a  href="index.html">Home</a></li>
-          <li><a  href="Market.html">Market</a></li>
+        <h1>Fiction <span class="name">Digitals</span></h1>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Market.html">Market</a></li>
           <li><a class="active" href="Wallet.html">Wallet</a></li>
           <li><a href="About.html">About Us</a></li>
         </ul>
       </nav>
-      
-      </div>
-</body>
+    </div>
+    <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="images/logo.png" alt="Logo" />
+      <h2>Fiction <span class="name">Digitals</span></h2>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="Market.html">Market</a>
+      <a href="Wallet.html">Wallet</a>
+      <a href="About.html">About Us</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fiction Digitals. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+    <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+  </body>
 </html>
