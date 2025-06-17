@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CRYPTO</title>
+    <title>Fiction Digitals</title>
     <link rel="stylesheet" href="Index.css" />
     <link
       rel="stylesheet"
@@ -12,6 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+
   </head>
   <body>
     <header>
@@ -22,11 +24,12 @@
         <ul id="nav-menu">
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="Market.html">Market</a></li>
-          <li><a href="Wallet.html">Wallet</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
           <li><a href="About.html">About Us</a></li>
         </ul>
       </nav>
     </header>
+
 
     <section class="carousel">
       <div class="carousel-container" id="carousel-container">
@@ -41,6 +44,7 @@
       <div class="carousel-dots" id="carousel-dots"></div>
     </section>
 
+    
     <main>
       <div class="content">
         <h1>BUY & <br />SELL <span>CRYPTO</span></h1>
@@ -64,7 +68,7 @@
         <div class="footer-links">
           <a href="index.html">Home</a>
           <a href="Market.html">Market</a>
-          <a href="Wallet.html">Wallet</a>
+          <a href="wallet.html">Wallet</a>
           <a href="About.html">About Us</a>
         </div>
         <div class="footer-bottom">
@@ -110,7 +114,7 @@
         setInterval(() => {
           currentSlide = (currentSlide + 1) % slides.length;
           showSlide(currentSlide);
-        }, 4000); // 4 seconds per slide
+        }, 4000);
       }
 
       createDots();
