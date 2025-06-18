@@ -15,7 +15,7 @@ nav {
   padding: 20px 0px;
   display: flex;
   align-items: center;
-  background: linear-gradient(10deg, #ccacff 5%, #743eca 70%);
+  background: linear-gradient(50deg, #ccacff 5%, #743eca 60%);
 }
 .logo {
   width: 50px;
@@ -111,7 +111,6 @@ nav ul li .active::after {
   cursor: pointer;
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -130,13 +129,6 @@ nav ul li .active::after {
   }
 }
 
-
-
-
-
-
-
-
 .table thead {
   background-color: #6a5395;
 }
@@ -154,14 +146,6 @@ nav ul li .active::after {
 .hero p {
   color: #dcdcdc;
 }
-
-
-
-
-
-
-
-
 
 .site-footer {
   background: linear-gradient(to right, #2f1064, #2f1064);
@@ -182,6 +166,7 @@ nav ul li .active::after {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-right: 15px;
 }
 
 .footer-logo img {
@@ -228,7 +213,6 @@ nav ul li .active::after {
   margin-left: 20px;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .footer-links {
     flex-direction: column;
