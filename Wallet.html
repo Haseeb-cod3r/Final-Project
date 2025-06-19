@@ -91,20 +91,22 @@
         li.textContent = `-${amount} BTC to ${address}`;
         transactions.insertBefore(li, transactions.firstChild);
         transactions.lastElementChild.remove()
+      }
+      else {
+        alert("Please enter valid address and amount.");
+      }
 
+      if (walletBalance.innerHTML > 0 && walletBalance.innerHTML - amount >= 0) {
         alert(`Sent ${amount} BTC to ${address}`);
         document.getElementById('toAddress').value = '';
         document.getElementById('amount').value = '';
-        if (walletBalance.innerHTML > 0) {
-          walletBalance.innerHTML = walletBalance.innerHTML - amount
-        } else {
-          walletBalance.innerHTML = '571'
-        }
-
+        walletBalance.innerHTML = walletBalance.innerHTML - amount
       } else {
-        alert("Please enter valid address and amount.");
+        alert('you do not have enough balance')
       }
+
     }
+    
   </script>
 </body>
 
